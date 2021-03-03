@@ -1,0 +1,5 @@
+create table movies(mid int primary key auto_increment, mname varchar(100) unique, mlang varchar(50), mdate date, mtype varchar(50), mrating varchar(100), mcollection  int(20));
+
+create table cast(mcid int primary key auto_increment, castname varchar(50) unique);
+
+create table mcast(id int primary key auto_increment, mid int , mcid int, foreign key (mid) references Movies(mid), foreign key (mcid) references castname(mcid));
